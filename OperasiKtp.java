@@ -209,19 +209,19 @@ public class OperasiKtp {
                 System.out.println("\tPROVINSI " + tmp.prov.toUpperCase());
                 System.out.println("\tKOTA " + tmp.kota.toUpperCase());
                 System.out.println();
-                System.out.println("NIK \t\t: " + tmp.nik);
-                System.out.println("Nama \t\t: " + tmp.nama);
+                System.out.println("NIK \t\t\t: " + tmp.nik);
+                System.out.println("Nama \t\t\t: " + tmp.nama);
                 System.out.println("Tempat/Tgl Lahir \t: " + tmp.kotaLahir + ", " + tmp.tglLahir + " " + getBulan(tmp.blnLahir) + " " + tmp.thnLahir);
                 System.out.println("Jenis Kelamin \t\t: " + getJk(tmp.jk));
                 System.out.println("Gol. Darah \t\t: " + tmp.golDarah);
-                System.out.println("Alamat \t\t: " + tmp.alamat);
-                System.out.println("\tRT/RW \t: " + "RT." + tmp.rt + " / RW." + tmp.rw);
+                System.out.println("Alamat \t\t\t: " + tmp.alamat);
+                System.out.println("\tRT/RW \t\t: " + "RT." + tmp.rt + " / RW." + tmp.rw);
                 System.out.println("\tKel/Desa \t: " + tmp.kel);
                 System.out.println("\tKecamatan \t: " + tmp.kec);
-                System.out.println("Agama \t\t: " + tmp.agama);
+                System.out.println("Agama \t\t\t: " + tmp.agama);
                 System.out.println("Status Perkawinan \t: " + tmp.statusNikah);
                 System.out.println("Pekerjaan \t\t: " + tmp.pekerjaan);
-                System.out.println("Kewarganegaraan \t\t: " + tmp.kwn);
+                System.out.println("Kewarganegaraan \t: " + tmp.kwn);
                 System.out.println("-------------------------------");
             }
         }
@@ -300,9 +300,12 @@ public class OperasiKtp {
             if (nomor < 1 || nomor > size) {
                 System.out.println("Input diluar batas");
             }
+            if (nomor == 1) {
+                search(head.nik);
+            }
             else {
                 NodeKtp current = head;
-                for (int i = 0; i < nomor; i++) {
+                for (int i = 1; i < nomor; i++) {
                     current = current.next;
                 }
                 search(current.nik);
