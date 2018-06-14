@@ -1,5 +1,5 @@
 package ktpGen;
 
-public class Node {
+public class NodeKtp {
     
 }
