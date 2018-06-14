@@ -39,6 +39,7 @@ public class OperasiKtp {
         String thnLahirStr = "" + thnLahir;
         String thnSubstring = thnLahirStr.length() > 2 ? thnLahirStr.substring(thnLahirStr.length() - 2) : thnLahirStr;
         String tglLahirFix = (tglLahir < 10) ? "0" + tglLahir : "" + tglLahir;
+        String blnLahirFix = (blnLahir < 10) ? "0" + blnLahir : "" + blnLahir;
 
         // Random kode unik E-KTP
         // total: 4 digit
@@ -46,7 +47,7 @@ public class OperasiKtp {
 
         // Hasil kombinasi NIK
         // total: 16 digit
-        String nik = "" + num6digit + tglLahirFix + blnLahir + thnSubstring + noElektronik;
+        String nik = "" + num6digit + tglLahirFix + blnLahirFix + thnSubstring + noElektronik;
         
         String kwn = "WNI";
         if (isEmpty()) {
@@ -75,14 +76,14 @@ public class OperasiKtp {
         if (!isEmpty()) {
             int i = 1;
             NodeKtp tmp = head;
-            System.out.println(" No.\tNIK\t\tNama");
-            System.out.println("---------------------------");
+            System.out.println(" No.\tNIK\t\t\tNama");
+            System.out.println("----------------------------------------");
             while (tmp != null) {
                 System.out.println("[" + i + "]\t" + tmp.nik + "\t" + tmp.nama);
                 tmp = tmp.next;
                 i++;
             }
-            System.out.println("---------------------------");
+            System.out.println("----------------------------------------");
             System.out.println("Total: " + size + " data KTP ditemukan");
         } else
             System.out.println("Data KTP masih kosong");
@@ -235,9 +236,13 @@ public class OperasiKtp {
         return hasil;
     }
 
-    /* public boolean isJk(char jk) {
+    public boolean isJk(char jk) {
         return jk == 'l' || jk == 'L' || jk == 'p' || jk == 'P';
-    } */
+    }
+
+    public boolean isGolDarah(char golDarah) {
+        return golDarah == 'a' || golDarah == 'A' || golDarah == 'b' || golDarah == 'B' || golDarah == 'o' || golDarah == 'O';
+    }
 
     /* public NodeKtp getSiswa(int nis) throws Exception {
         if (isEmpty())
@@ -287,6 +292,25 @@ public class OperasiKtp {
             }
         }
     }
+
+    public void printNomor(int nomor) {
+        if (isEmpty())
+            System.out.println("Data KTP masih kosong");
+        else {
+            if (nomor < 1 || nomor > size) {
+                System.out.println("Input diluar batas");
+            }
+            else {
+                NodeKtp current = head;
+                for (int i = 0; i < nomor; i++) {
+                    current = current.next;
+                }
+                search(current.nik);
+            }
+        }
+    }
+
+
 
     /* public boolean isKelas(String kelas) {
         return kelas.equalsIgnoreCase("VII") || kelas.equalsIgnoreCase("VIII") || kelas.equalsIgnoreCase("IX");
