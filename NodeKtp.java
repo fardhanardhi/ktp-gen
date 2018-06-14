@@ -5,11 +5,12 @@ public class NodeKtp {
     String nama;
     String kotaLahir;
     int tglLahir, blnLahir, thnLahir;
-    char jk;
+    char jk, golDarah;
+    String alamat;
     int rt, rw;
     String kel, kec, kota, prov;
     String agama;
-    boolean statusNikah;
+    String statusNikah;
     String pekerjaan;
     String kwn;
     
@@ -25,6 +26,7 @@ public class NodeKtp {
         int blnLahir, 
         int thnLahir, 
         char jk,
+        String alamat,
         int rt, 
         int rw,
         String kel, 
@@ -32,9 +34,10 @@ public class NodeKtp {
         String kota, 
         String prov,
         String agama,
-        boolean statusNikah,
+        String statusNikah,
         String pekerjaan,
         String kwn,
+        char golDarah,
         NodeKtp next
     ) {
         this.prev = prev;
@@ -45,6 +48,7 @@ public class NodeKtp {
         this.blnLahir = blnLahir;
         this.thnLahir = thnLahir;
         this.jk = jk;
+        this.alamat = alamat;
         this.rt = rt;
         this.rw = rw;
         this.kel = kel;
@@ -55,6 +59,7 @@ public class NodeKtp {
         this.statusNikah = statusNikah;
         this.pekerjaan = pekerjaan;
         this.kwn = kwn;
+        this.golDarah = golDarah;
         this.next = next;
     }
 }
