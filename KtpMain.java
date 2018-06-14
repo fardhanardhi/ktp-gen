@@ -15,6 +15,10 @@ public class KtpMain {
         char jk, golDarah;
         String nik, nama, kotaLahir, alamat, kel, kec, kota, prov, agama = "", statusNikah = "", pekerjaan; 
 
+        ok.add("Fardhan Ardhi", "Malang", 16, 1, 1999, 'L', "JL TItan", 5, 4, "Pandanwangi", "Blimbing", "Malang", "Jatim", "Islam", "Kawin", "Magang", 'O');
+        ok.add("adan Ardhi", "Malang", 16, 1, 1999, 'L', "JL TItan", 5, 4, "Pandanwangi", "Blimbing", "Malang", "Jatim", "Islam", "Kawin", "Magang", 'O');
+        ok.add("adi Ardhi", "Malang", 16, 1, 1999, 'L', "JL TItan", 5, 4, "Pandanwangi", "Blimbing", "Malang", "Jatim", "Islam", "Kawin", "Magang", 'O');
+        
         while (ulang) {
             System.out.println();
             System.out.println("+------------------------+");
@@ -152,8 +156,10 @@ public class KtpMain {
                 ok.print();
                 System.out.println();
                 System.out.println("---------------------------");
-                System.out.print("-> pilih nomor: ");
-                pilihan = sci.nextInt();
+                do {
+                    System.out.print("-> pilih nomor: ");
+                    pilihan = sci.nextInt();
+                } while (pilihan > ok.size);
                 System.out.println();
                 ok.printNomor(pilihan);
                 break;
