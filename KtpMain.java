@@ -156,12 +156,14 @@ public class KtpMain {
                 ok.print();
                 System.out.println();
                 System.out.println("---------------------------");
+                if (!ok.isEmpty()) {
                 do {
                     System.out.print("-> pilih nomor: ");
                     pilihan = sci.nextInt();
                 } while (pilihan > ok.size);
                 System.out.println();
                 ok.printNomor(pilihan);
+                }
                 break;
             case 3:
                 System.out.println();
