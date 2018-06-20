@@ -15,9 +15,11 @@ public class KtpMain {
         char jk, golDarah;
         String nik, nama, kotaLahir, alamat, kel, kec, kota, prov, agama = "", statusNikah = "", pekerjaan; 
 
-        ok.add("Fardhan Ardhi", "Malang", 16, 1, 1999, 'L', "JL TItan", 5, 4, "Pandanwangi", "Blimbing", "Malang", "Jatim", "Islam", "Kawin", "Magang", 'O');
-        ok.add("adan Ardhi", "Malang", 16, 1, 1999, 'L', "JL TItan", 5, 4, "Pandanwangi", "Blimbing", "Malang", "Jatim", "Islam", "Kawin", "Magang", 'O');
-        ok.add("adi Ardhi", "Malang", 16, 1, 1999, 'L', "JL TItan", 5, 4, "Pandanwangi", "Blimbing", "Malang", "Jatim", "Islam", "Kawin", "Magang", 'O');
+        ok.add("Raharjo Putra Setiawan", "Surabaya", 13, 5, 1985, 'L', "Jl. Kedung Tarukan 54 Surabaya, Jawa Timur", 5, 4, "Jepara", "Bubutan", "Surabaya", "Jawa Timur", "Islam", "Kawin", "Radio mechanic", 'O');
+        ok.add("Danar Ragil Aditya", "Malang", 2, 5, 1996, 'L', "Jl. Lematang No. 10", 6, 3, "Rampal Celaket", "Klojen", "Malang", "Jawa Timur", "Islam", "Belum Kawin", "Pelajar", 'O');
+        ok.add("Dwi Farida Tanudjaja", "Denpasar", 31, 11, 1989, 'P', "jl.Dr Muwardi no.7, Bali", 2, 4, "Seminyak", "Kuta", "Denpasar", "Bali", "Hindu", "Kawin", "Geologist", 'A');
+        ok.add("Darma Dwi Kusnadi", "Semarang", 14, 10, 1975, 'L', "Jl. Mlatiharjo Raya No.56, Jawa Tengah", 3, 5, "Jomblang", "Camdisari", "Semarang", "Jawa Tengah", "Buddha", "Belum Kawin", "Aircraft and avionics service technician", 'O');
+        ok.add("Fardhan Ardhi Ramadhan", "Malang", 16, 1, 1999, 'L', "Jl. Titan Asri X H 12", 5, 12, "Pandanwangi", "Blimbing", "Malang", "Jawa Timur", "Islam", "Belum Kawin", "Pelajar", 'O');
         
         while (ulang) {
             System.out.println();
@@ -157,12 +159,12 @@ public class KtpMain {
                 System.out.println();
                 System.out.println("---------------------------");
                 if (!ok.isEmpty()) {
-                do {
-                    System.out.print("-> pilih nomor: ");
-                    pilihan = sci.nextInt();
-                } while (pilihan > ok.size);
-                System.out.println();
-                ok.printNomor(pilihan);
+                    do {
+                        System.out.print("-> pilih nomor: ");
+                        pilihan = sci.nextInt();
+                    } while (pilihan > ok.size);
+                    System.out.println();
+                    ok.printNomor(pilihan);
                 }
                 break;
             case 3:
