@@ -89,31 +89,6 @@ public class OperasiKtp {
             System.out.println("Data KTP masih kosong");
     }
 
-    /* public void printByKelas(String kelas) throws Exception {
-        if (isEmpty())
-            throw new Exception("Daftar siswa masih kosong");
-        boolean ditemukan = false;
-        NodeKtp tmp = head;
-        int jumlah = 0;
-        System.out.println("Kelas\t NIS\tNama");
-        System.out.println("----------------------");
-        for (int i = 0; i < size; i++) {
-            if (tmp.kelas.equalsIgnoreCase(kelas)) {
-                ditemukan = true;
-                System.out.println(tmp.kelas + "\t[" + tmp.nis + "]\t" + tmp.nama);
-                jumlah++;
-            }
-            tmp = tmp.next;
-        }
-        if (!ditemukan) {
-            System.out.println("----------------------");
-            throw new Exception("Nilai tidak ditemukan");
-        } else {
-            System.out.println("----------------------");
-            System.out.println("-> " + jumlah + " Data ditemukan");
-        }
-    } */
-
     public void removeFirst() {
         if (isEmpty())
             System.out.println("Data KTP masih kosong, tidak dapat dihapus");
@@ -244,26 +219,6 @@ public class OperasiKtp {
         return golDarah == 'a' || golDarah == 'A' || golDarah == 'b' || golDarah == 'B' || golDarah == 'o' || golDarah == 'O';
     }
 
-    /* public NodeKtp getSiswa(int nis) throws Exception {
-        if (isEmpty())
-            throw new Exception("Daftar siswa masih kosong");
-        boolean ditemukan = false;
-        NodeKtp tmp = head;
-        for (int i = 0; i < size; i++) {
-            if (tmp.nis != nis) {
-                tmp = tmp.next;
-            } else {
-                ditemukan = true;
-                break;
-            }
-        }
-        if (!ditemukan)
-            throw new Exception("Nilai tidak ditemukan");
-        else {
-            return tmp;
-        }
-    } */
-
     public void remove(int nomor) {
         if (isEmpty())
             System.out.println("Data KTP masih kosong, tidak dapat dihapus");
@@ -313,24 +268,4 @@ public class OperasiKtp {
             }
         }
     }
-
-
-
-    /* public boolean isKelas(String kelas) {
-        return kelas.equalsIgnoreCase("VII") || kelas.equalsIgnoreCase("VIII") || kelas.equalsIgnoreCase("IX");
-    } */
-
-    /* public boolean isNis(int nis) {
-        boolean ditemukan = false;
-        NodeKtp tmp = head;
-        for (int i = 0; i < size; i++) {
-            if (tmp.nis != nis) {
-                tmp = tmp.next;
-            } else {
-                ditemukan = true;
-                break;
-            }
-        }
-        return ditemukan;
-    } */
 }
