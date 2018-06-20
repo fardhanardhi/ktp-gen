@@ -164,8 +164,48 @@ public class KtpMain {
                 ok.printNomor(pilihan);
                 break;
             case 3:
+                System.out.println();
+                System.out.print("Masukan NIK yang dicari: ");
+                nik = scs.nextLine();
+                System.out.println();
+                ok.search(nik);
                 break;
             case 4:
+                System.out.println();
+                System.out.println("-> [1] Hapus KTP");
+                System.out.println("-> [2] Hapus semua KTP");
+                System.out.println("-> [0] Batal");
+                System.out.println("-----------------------------");
+                System.out.print("-> Masukan Pilihan: ");
+                pilihan = sci.nextInt();
+                System.out.println();
+                switch (pilihan) {
+                    case 1:
+                        System.out.println();
+                        ok.print();
+                        System.out.println();
+                        System.out.println("---------------------------");
+                        if (!ok.isEmpty()) {
+                            do {
+                                System.out.print("-> pilih nomor: ");
+                                pilihan = sci.nextInt();
+                            } while (pilihan > ok.size);
+                            System.out.println();
+                            ok.printNomor(pilihan);
+                            System.out.println();
+                            System.out.println("Data dihapus");
+                            ok.remove(pilihan);
+                        }
+                        break;
+                    case 2:
+                        ok.clear();
+                        break;
+                    case 0:
+                        break;
+                    default:
+                        System.out.print("Input salah! ");
+                        break;
+                }
                 break;
             case 0:
                 System.out.print("Keluar ");
