@@ -27,7 +27,7 @@ public class KtpMain {
             System.out.println("| -> [1] Pembuatan KTP   |");
             System.out.println("| -> [2] Tampilkan KTP   |");
             System.out.println("| -> [3] Cari KTP        |");
-            System.out.println("| -> [3] Hapus KTP       |");
+            System.out.println("| -> [4] Hapus KTP       |");
             System.out.println("| -> [0] Keluar          |");
             System.out.println("+------------------------+");
             System.out.print("-> Masukan Pilihan: ");
