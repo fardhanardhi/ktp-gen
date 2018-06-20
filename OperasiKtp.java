@@ -275,7 +275,7 @@ public class OperasiKtp {
                 removeFirst();
             else {
                 NodeKtp current = head;
-                for (int i = 0; i < nomor; i++) {
+                for (int i = 1; i < nomor; i++) {
                     current = current.next;
                 }
                 if (current.next == null)
@@ -284,7 +284,8 @@ public class OperasiKtp {
                     current = current.next;
                     current.prev = null;
                     head = current;
-                } else {
+                } 
+                else {
                     current.prev.next = current.next;
                     current.next.prev = current.prev;
                 }
